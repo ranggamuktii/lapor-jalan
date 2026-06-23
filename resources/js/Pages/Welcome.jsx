@@ -16,8 +16,8 @@ export default function Welcome({ recentReports = [] }) {
                         <p className="text-blue-100 text-xs font-medium mb-1">Selamat datang di</p>
                         <h1 className="text-2xl font-black text-white tracking-tight">Lapor Jalan</h1>
                     </div>
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm p-1.5 shadow-sm border border-white/30">
-                        <img src="/app-logo.png" alt="Lapor Jalan Logo" className="w-full h-full object-contain drop-shadow-md" />
+                    <div className="w-[72px] h-[72px] bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm p-1.5 shadow-sm border border-white/30">
+                        <img src="/app-logo.png" alt="Lapor Jalan Logo" className="w-full h-full object-contain drop-shadow-md rounded-full" />
                     </div>
                 </div>
             </div>
