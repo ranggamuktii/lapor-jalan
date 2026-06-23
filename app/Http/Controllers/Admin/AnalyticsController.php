@@ -56,10 +56,13 @@ class AnalyticsController extends Controller
 
         // Fetch Weekly AI Summary
         $aiService = new \App\Services\AiService();
+        $topCategory = $categories->sortByDesc('count')->first();
+        $topDistrict = $areaStats->first();
+
         $summary = $aiService->generateWeeklySummary([
             'total_reports' => $totalReports,
-            'top_category' => $categories->sortByDesc('count')->first()['name'] ?? '-',
-            'top_district' => $areaStats->first()['district_name'] ?? '-',
+            'top_category' => $topCategory ? $topCategory['name'] : '-',
+            'top_district' => $topDistrict ? $topDistrict['district_name'] : '-',
         ]);
 
         // Weekly Trend Data (Last 7 Days)
