@@ -9,6 +9,7 @@ use App\Models\Report;
 use Inertia\Inertia;
 use App\Mail\ReportStatusUpdated;
 use App\Events\ReportStatusChanged;
+use Illuminate\Support\Facades\Mail;
 
 class ReportController extends Controller
 {
